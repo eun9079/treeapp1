@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/QR"
+        android:title="QR"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/tree_add"
+        android:title="ADD"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/option"
+        android:title="option"
+        />
+
+</menu>

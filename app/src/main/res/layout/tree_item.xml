@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tree_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tree_nickname"
+        android:text="나무 이름"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tree_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tree_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tree_name"
+        android:text="나무 별명"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/print_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:text="QR 코드 인쇄"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

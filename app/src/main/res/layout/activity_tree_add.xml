@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TreeAddActivity">
+
+    <TextView
+        android:id="@+id/activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="수목 추가"
+        android:textSize="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tree_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:text="수목 이름"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tree_name"
+        app:layout_constraintTop_toBottomOf="@id/activity_title"
+        app:layout_constraintBottom_toTopOf="@id/tree_nickname_label"/>
+
+    <EditText
+        android:id="@+id/tree_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="수목 이름"
+        app:layout_constraintBottom_toBottomOf="@id/tree_name_label"
+        app:layout_constraintLeft_toRightOf="@id/tree_name_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tree_name_label" />
+
+    <TextView
+        android:id="@+id/tree_nickname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:text="별명"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/tree_name_label"
+        app:layout_constraintRight_toRightOf="@id/tree_name_label"
+        app:layout_constraintTop_toBottomOf="@id/tree_name"
+        app:layout_constraintBottom_toTopOf="@id/water_label"
+        />
+
+    <EditText
+        android:id="@+id/tree_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="별명"
+        app:layout_constraintBottom_toBottomOf="@id/tree_nickname_label"
+        app:layout_constraintLeft_toLeftOf="@id/tree_name"
+        app:layout_constraintRight_toRightOf="@id/tree_name"
+        app:layout_constraintTop_toTopOf="@id/tree_nickname_label" />
+
+    <TextView
+        android:id="@+id/water_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tree_nickname_label"
+        app:layout_constraintBottom_toTopOf="@id/water_cycles"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        android:text="물주는 주기"
+        android:textSize="20dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/water_cycles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/water_label"
+        app:layout_constraintBottom_toTopOf="@id/tree_map"
+        >
+
+        <RadioButton
+            android:id="@+id/water1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1 시간"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/water6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6 시간" />
+
+        <RadioButton
+            android:id="@+id/water12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12 시간" />
+
+        <RadioButton
+            android:id="@+id/water24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="24 시간" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tree_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tree_map"
+        android:text="위도 : xxx.xxx.xxx 경도 : xxx.xxx.xxx"
+        />
+
+    <fragment
+        android:id="@+id/tree_map"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        app:layout_constraintTop_toBottomOf="@id/water_cycles"
+        app:layout_constraintBottom_toTopOf="@id/tree_write"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <Button
+        android:id="@+id/tree_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="추가 하기"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
